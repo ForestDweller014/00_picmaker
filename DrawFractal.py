@@ -2,6 +2,8 @@ import math
 from Color import Color
 from Complex import Complex
 
+#The commented parts would generate the second fractal in the gallery
+
 pmap = []
 
 height = 535
@@ -65,8 +67,8 @@ for l in range(height):
                 break
             
         zn = count - math.log(math.log(z.norm()) / math.log(bailout), pixelVal.norm())
-        zn = 1.5 * zn
-        ratio = (math.floor(zn) % 360) / 360 - 0.2
+        zn = 1.5 * zn#1.8 * zn
+        ratio = (math.floor(zn) % 360) / 360 - 0.2#0.4
 
         new_color = Color.interpolate(colors, ratio, "cosine")
         pmap[l][w] += str(int(new_color.r)) + " " + str(int(new_color.g)) + " " + str(int(new_color.b)) + " "
