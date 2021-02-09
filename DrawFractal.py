@@ -43,7 +43,7 @@ def initialize():
 
 print("Initializing...")
 initialize()
-print("Initialized. Generating image (this can take a long time depending on resolution)...")
+print("Initialized. Generating image (this will take a few minutes for the default resolution)...")
 
 y = init_y + step_y / 2
 for l in range(height):
